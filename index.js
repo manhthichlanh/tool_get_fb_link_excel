@@ -30,10 +30,10 @@ function extractFacebookId(url) {
   }
 
   const idPatterns = [
-    /\/videos\/(\d{1,16})/,        // URL dạng /videos/<ID>
-    /v=(\d{1,16})/,                // Tham số v=<ID>
-    /vb\.\d{1,16}\/(\d{1,16})/,          // Dạng vb.<ID>/ hoặc vb.<ID>/something
-    /\/(\d{1,16})\/$/
+    /\/videos\/(\d{1,17})/,        // URL dạng /videos/<ID>
+    /v=(\d{1,17})/,                // Tham số v=<ID>
+    /vb\.\d{1,16}\/(\d{1,17})/,          // Dạng vb.<ID>/ hoặc vb.<ID>/something
+    /\/(\d{1,17})\/$/
   ];
   for (const pattern of idPatterns) {
     const match = url.match(pattern);
